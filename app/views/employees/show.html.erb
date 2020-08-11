@@ -1,0 +1,11 @@
+<img src="<%= @employee.img_url %>" alt="" style="width:500px;"></img>
+<body style="background-color:white;">
+<h1><%= "#{@employee.first_name + " " + @employee.last_name}" %></h1>
+<li><%= @employee.alias %></li>
+<br>
+<li><%= @employee.title %></li>
+<br>
+<li><%= @employee.office %></li>
+<br>
+<li><%= @employee.dog.name %></li>
+<br>
