@@ -1,0 +1,9 @@
+<h1> Doggy Dogs </h1>
+    <h3> SELECT YOUR DOG, DAWG </h3>
+<% @dogs.each do |t| %>
+    <%= link_to t.name, dog_path(t) %>
+    <br>
+    
+<% end %>
+<br><br>
+<%= link_to "View sorted list", dogs_sorted_path %>
