@@ -1,0 +1,25 @@
+<h1>Update Employee</h1>
+
+<%= form_for(@employee) do |f| %>
+    <label>Employee First Name:</label><br>
+    <%= f.text_field :first_name %><br>
+
+    <label>Employee Last Name:</label><br>
+    <%= f.text_field :last_name %><br>
+
+    <label>Employee Title:</label><br>
+    <%= f.text_field :title %><br>
+  
+    <label>Employee Alias:</label><br>
+    <%= f.text_field :alias %><br>
+
+    <label>Employee Office:</label><br>
+    <%= f.text_field :office %><br>
+
+    <label>Employee Image URL:</label><br>
+    <%= f.text_field :img_url %><br>
+
+    <%= f.select :dog_id,  Dog.all.map{ |dog| [dog.name, dog.id] } %>
+  
+    <%= f.submit %>
+  <% end %>
