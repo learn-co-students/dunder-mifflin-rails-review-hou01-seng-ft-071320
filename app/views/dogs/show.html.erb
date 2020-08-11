@@ -1,0 +1,9 @@
+
+Dog Name: <%= @dog.name %></br>
+Dog Breed: <%= @dog.breed %></br>
+Dog Age: <%= @dog.age %></br>
+<h1> Dog's Employee </h1>
+<% employee = Employee.all.where(dog_id: @dog.id) %>
+<% employee.each do |emp| %>
+<%= emp.first_name + " " + emp.last_name %><br>
+<% end %>
