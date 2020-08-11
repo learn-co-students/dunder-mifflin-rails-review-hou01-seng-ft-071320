@@ -1,0 +1,11 @@
+<h1> Sorted Doggy Dogs </h1>
+    <h3> SELECT YOUR DOG, DAWG </h3>
+<% @sorted.each do |t| %>
+    <%= link_to t.name, dog_path(t) %>
+    <%= t.employees.count.to_s + " owners" %> 
+    <br>
+    
+<% end %>
+
+<br><br>
+<%= link_to "View unsorted list", dogs_path %>
