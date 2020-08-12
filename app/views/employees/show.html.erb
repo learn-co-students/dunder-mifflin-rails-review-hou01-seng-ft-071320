@@ -1,0 +1,9 @@
+<h1> Current Employee </h1>
+
+<h2> Name: <%= @employee.full_name %> </h2>
+<h2> Alias <%= @employee.alias %> </h2>
+<h2> Title: <%= @employee.title %> </h2>
+<%= image_tag(@employee.img_url) %>
+<br>
+
+<%= link_to 'Return to all employees', employees_path %>s

@@ -1,0 +1,16 @@
+<h1> All Employees </h1>
+
+<div style="color: red;">
+<% if flash[:message]["alias"].nil? == false %>
+<h3> Alias error: <%= flash[:message]["alias"][0] %> </h3>
+<% end %>
+<% if flash[:message]["title"].nil? == false %>
+   <h3> Title error: <%= flash[:message]["title"][0] %> </h3>
+<% end %>
+</div>
+
+<ul>
+<% @employees.each do |employee| %>
+    <li> <%= link_to employee.first_name, employee_path(employee) %> </li>
+<% end %>
+</ul>
